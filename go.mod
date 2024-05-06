@@ -14,6 +14,7 @@ require (
 )
 
 require (
+	github.com/gdamore/tcell v1.4.0
 	github.com/mattn/go-runewidth v0.0.15 // indirect
 	github.com/rivo/tview v0.0.0-20240505185119-ed116790de0f
 )
