@@ -1,37 +1,59 @@
 package main
 
 import (
-	"github.com/gdamore/tcell/v2"
-	"github.com/rivo/tview"
+	"fmt"
+	"os"
+	"os/exec"
 )
 
-func createTextView(text string) *tview.TextView {
-	view := tview.NewTextView().
-		SetText(text).
-		SetTextAlign(tview.AlignCenter).
-		SetTextColor(tview.Styles.PrimaryTextColor)
+func ExecuteQueryCommand(path, query string) (string, error) {
+	out, err := exec.Command("jq", query, path).Output()
 
-	view.SetBackgroundColor(tcell.ColorBlack.TrueColor())
+	if err != nil {
+		println("query " + query + " failed for at " + path)
+		println(err.Error())
+	}
 
-	return view
+	return string(out), err
 }
 
 func main() {
-	app := tview.NewApplication()
+	basePath := "./test-jsons/"
+	files, _ := os.ReadDir(basePath)
 
-	mainLayout := tview.NewGrid().SetColumns(0, 0).SetRows(0, 0).SetBorders(true)
-	mainLayout.SetBackgroundColor(tcell.ColorBlack.TrueColor())
+	for _, file := range files {
 
-	queryPicker := createTextView("Picker")
-	mainLayout.AddItem(queryPicker, 0, 0, 1, 1, 0, 0, false)
+		if file.IsDir() {
+			continue
+		}
 
-	preview := createTextView("Preview")
-	mainLayout.AddItem(preview, 0, 2, 1, 1, 0, 0, false)
+		println()
+		println(file.Name())
 
-	historyPanel := createTextView("History")
-	mainLayout.AddItem(historyPanel, 2, 0, 1, 1, 0, 0, false)
+		baseType, err := ExecuteQueryCommand(basePath+file.Name(), ".|type")
 
-	if err := app.SetRoot(mainLayout, true).Run(); err != nil {
-		panic(err)
+		if err != nil {
+			continue
+		}
+
+		baseType = baseType[1 : len(baseType)-2]
+
+		switch baseType {
+		case "object":
+			keys, err := ExecuteQueryCommand(basePath+file.Name(), ".|keys")
+			if err != nil {
+				continue
+			}
+			fmt.Printf("keys: %v\n", keys)
+
+		case "array":
+			keys, err := ExecuteQueryCommand(basePath+file.Name(), ".[0]|keys")
+			if err != nil {
+				continue
+			}
+			fmt.Printf("keys: %v\n", keys)
+		}
+
 	}
+
 }
