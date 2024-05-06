@@ -1,41 +1,33 @@
 package main
 
 import (
-	"fmt"
-	"log"
-
-	"github.com/jroimartin/gocui"
+	"github.com/gdamore/tcell/v2"
+	"github.com/rivo/tview"
 )
 
+func createTextView(text string) *tview.TextView {
+	view := tview.NewTextView().
+		SetText(text).
+		SetTextAlign(tview.AlignCenter).
+		SetTextColor(tview.Styles.PrimaryTextColor)
+
+	view.SetBackgroundColor(tcell.ColorBlack.TrueColor())
+
+	return view
+}
+
 func main() {
-	g, err := gocui.NewGui(gocui.OutputNormal)
-	if err != nil {
-		log.Panicln(err)
+	app := tview.NewApplication()
+
+	mainLayout := tview.NewGrid().SetColumns(0, 0).SetRows(0, 0).SetBorders(true)
+	mainLayout.SetBackgroundColor(tcell.ColorBlack.TrueColor())
+
+	mainLayout.
+		AddItem(createTextView("Picker"), 0, 0, 2, 1, 0, 0, false).
+		AddItem(createTextView("Preview"), 0, 1, 4, 2, 0, 0, false).
+		AddItem(createTextView("history"), 2, 0, 2, 1, 0, 0, false)
+
+	if err := app.SetRoot(mainLayout, true).Run(); err != nil {
+		panic(err)
 	}
-	defer g.Close()
-
-	g.SetManagerFunc(layout)
-
-	if err := g.SetKeybinding("", gocui.KeyCtrlC, gocui.ModNone, quit); err != nil {
-		log.Panicln(err)
-	}
-
-	if err := g.MainLoop(); err != nil && err != gocui.ErrQuit {
-		log.Panicln(err)
-	}
-}
-
-func layout(g *gocui.Gui) error {
-	maxX, maxY := g.Size()
-	if v, err := g.SetView("hello", maxX/2-7, maxY/2, maxX/2+7, maxY/2+2); err != nil {
-		if err != gocui.ErrUnknownView {
-			return err
-		}
-		fmt.Fprintln(v, "Hello world!")
-	}
-	return nil
-}
-
-func quit(g *gocui.Gui, v *gocui.View) error {
-	return gocui.ErrQuit
 }
