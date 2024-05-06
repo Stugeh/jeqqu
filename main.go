@@ -1,5 +1,16 @@
 package main
 
+import (
+	"github.com/rivo/tview"
+)
+
 func main() {
-	println("hello world")
+	box := tview.
+		NewBox().
+		SetBorder(true).
+		SetTitle("JEQQU")
+
+	if err := tview.NewApplication().SetRoot(box, true).Run(); err != nil {
+		panic(err)
+	}
 }
