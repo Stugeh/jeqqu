@@ -1,0 +1,77 @@
+[
+  {
+    "full_name": "Elias Schuppe",
+    "phone_number": "+123 123123",
+    "address": "{\"streetaddress\":{\"number\":51,\"street\":\"Lela Parkways\",\"cohabitants\":[\"Timmy\",\"Tommy\",\"Tammy\"],\"city\":\"Chateaubelair\"}}"
+  },
+  {
+    "full_name": "Aria Smith",
+    "phone_number": "+456 456456",
+    "address": "{\"streetaddress\":{\"number\":22,\"street\":\"Willow Street\",\"cohabitants\":[\"John\",\"Jane\"],\"city\":\"Springfield\"}}"
+  },
+  {
+    "full_name": "Nathan Johnson",
+    "phone_number": "+789 789789",
+    "address": "{\"streetaddress\":{\"number\":10,\"street\":\"Oak Avenue\",\"cohabitants\":[\"Sarah\"],\"city\":\"Maplewood\"}}"
+  },
+  {
+    "full_name": "Emily Brown",
+    "phone_number": "+111 222333",
+    "address": "{\"streetaddress\":{\"number\":5,\"street\":\"Pine Road\",\"cohabitants\":[\"Chris\",\"Emma\"],\"city\":\"Lakeview\"}}"
+  },
+  {
+    "full_name": "Michael Jones",
+    "phone_number": "+444 555666",
+    "address": "{\"streetaddress\":{\"number\":30,\"street\":\"Cedar Lane\",\"cohabitants\":[\"David\",\"Sophia\"],\"city\":\"Bridgewater\"}}"
+  },
+  {
+    "full_name": "Sophie Martinez",
+    "phone_number": "+777 888999",
+    "address": "{\"streetaddress\":{\"number\":17,\"street\":\"Elm Street\",\"cohabitants\":[\"Alex\",\"Olivia\"],\"city\":\"Riverside\"}}"
+  },
+  {
+    "full_name": "Emma Wilson",
+    "phone_number": "+222 333444",
+    "address": "{\"streetaddress\":{\"number\":12,\"street\":\"Birch Street\",\"cohabitants\":[\"Ryan\",\"Lily\"],\"city\":\"Evergreen\"}}"
+  },
+  {
+    "full_name": "Liam Taylor",
+    "phone_number": "+555 666777",
+    "address": "{\"streetaddress\":{\"number\":8,\"street\":\"Maple Avenue\",\"cohabitants\":[\"Ethan\",\"Ava\"],\"city\":\"Woodland\"}}"
+  },
+  {
+    "full_name": "Oliver Brown",
+    "phone_number": "+888 999000",
+    "address": "{\"streetaddress\":{\"number\":25,\"street\":\"Chestnut Lane\",\"cohabitants\":[\"Mia\",\"Noah\"],\"city\":\"Sunnyvale\"}}"
+  },
+  {
+    "full_name": "Isabella Rodriguez",
+    "phone_number": "+111 222333",
+    "address": "{\"streetaddress\":{\"number\":19,\"street\":\"Oakwood Drive\",\"cohabitants\":[\"Elijah\",\"Charlotte\"],\"city\":\"Hillside\"}}"
+  },
+  {
+    "full_name": "Mason Garcia",
+    "phone_number": "+444 555666",
+    "address": "{\"streetaddress\":{\"number\":14,\"street\":\"Pinecrest Avenue\",\"cohabitants\":[\"Aiden\",\"Scarlett\"],\"city\":\"Valleyview\"}}"
+  },
+  {
+    "full_name": "Sophia Hernandez",
+    "phone_number": "+777 888999",
+    "address": "{\"streetaddress\":{\"number\":31,\"street\":\"Sycamore Street\",\"cohabitants\":[\"Lucas\",\"Amelia\"],\"city\":\"Fairview\"}}"
+  },
+  {
+    "full_name": "William Lopez",
+    "phone_number": "+123 456789",
+    "address": "{\"streetaddress\":{\"number\":7,\"street\":\"Magnolia Boulevard\",\"cohabitants\":[\"Carter\",\"Chloe\"],\"city\":\"Greenwood\"}}"
+  },
+  {
+    "full_name": "Evelyn Martinez",
+    "phone_number": "+555 666777",
+    "address": "{\"streetaddress\":{\"number\":20,\"street\":\"Cedar Avenue\",\"cohabitants\":[\"Jackson\",\"Ella\"],\"city\":\"Hawthorne\"}}"
+  },
+  {
+    "full_name": "James Robinson",
+    "phone_number": "+888 999000",
+    "address": "{\"streetaddress\":{\"number\":42,\"street\":\"Holly Lane\",\"cohabitants\":[\"Mason\",\"Avery\"],\"city\":\"Sunset\"}}"
+  }
+]
