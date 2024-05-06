@@ -22,10 +22,14 @@ func main() {
 	mainLayout := tview.NewGrid().SetColumns(0, 0).SetRows(0, 0).SetBorders(true)
 	mainLayout.SetBackgroundColor(tcell.ColorBlack.TrueColor())
 
-	mainLayout.
-		AddItem(createTextView("Picker"), 0, 0, 2, 1, 0, 0, false).
-		AddItem(createTextView("Preview"), 0, 1, 4, 2, 0, 0, false).
-		AddItem(createTextView("history"), 2, 0, 2, 1, 0, 0, false)
+	queryPicker := createTextView("Picker")
+	mainLayout.AddItem(queryPicker, 0, 0, 1, 1, 0, 0, false)
+
+	preview := createTextView("Preview")
+	mainLayout.AddItem(preview, 0, 2, 1, 1, 0, 0, false)
+
+	historyPanel := createTextView("History")
+	mainLayout.AddItem(historyPanel, 2, 0, 1, 1, 0, 0, false)
 
 	if err := app.SetRoot(mainLayout, true).Run(); err != nil {
 		panic(err)
