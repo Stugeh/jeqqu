@@ -1,0 +1,15 @@
+{
+  "name": "Mixed Data Test",
+  "description": "Testing mixed data types",
+  "number": 42,
+  "boolean": true,
+  "null_value": null,
+  "array_of_strings": ["apple", "banana", "cherry"],
+  "array_of_numbers": [1, 2, 3],
+  "object_with_mixed_types": {
+    "string": "Hello",
+    "number": 123,
+    "boolean": false,
+    "null_value": null
+  }
+}

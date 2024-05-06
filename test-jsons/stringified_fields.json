@@ -12,7 +12,7 @@
   {
     "full_name": "Nathan Johnson",
     "phone_number": "+789 789789",
-    "address": "{\"streetaddress\":{\"number\":10,\"street\":\"Oak Avenue\",\"cohabitants\":[\"Sarah\"],\"city\":\"Maplewood\"}}"
+    "address": "{\"streetaddress\":{\"number\":10,\"street\":\"Oak Avenue\",\"cohabitants\":[],\"city\":\"Maplewood\"}}"
   },
   {
     "full_name": "Emily Brown",

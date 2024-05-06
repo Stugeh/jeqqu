@@ -1,0 +1,11 @@
+{
+  "name": "Unicode Test",
+  "description": "Testing Unicode characters",
+  "unicode_string": "漢字と仮名",
+  "emojis": ["😊", "🌟", "🎉"],
+  "special_characters": {
+    "arrow": "→",
+    "currency": "€",
+    "fraction": "½"
+  }
+}

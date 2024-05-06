@@ -1,0 +1,11 @@
+{
+  "name": "Edge Cases Test",
+  "description": "Testing edge cases",
+  "empty_object": {},
+  "empty_array": [],
+  "nested_empty_object": { "nested": {} },
+  "nested_empty_array": { "nested": [] },
+  "null_value": null,
+  "invalid_json": "This is not valid JSON",
+  "escaped_characters": "This string contains \"escaped\" characters."
+}

@@ -64,9 +64,9 @@
     "phone_number": "+777 888999",
     "address": {
       "streetaddress": {
-        "number": 17,
+        "number": null,
         "street": "Elm Street",
-        "cohabitants": ["Alex", "Olivia"],
+        "cohabitants": [],
         "city": "Riverside"
       }
     }
